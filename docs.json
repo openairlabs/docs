@@ -38,26 +38,6 @@
             ]
           }
         ]
-      },
-      {
-        "tab": "API Reference",
-        "groups": [
-          {
-            "group": "API Basics",
-            "pages": [
-              "api-reference/introduction",
-              "api-reference/authentication"
-            ]
-          },
-          {
-            "group": "Endpoints",
-            "pages": [
-              "api-reference/campaigns",
-              "api-reference/metrics",
-              "api-reference/accounts"
-            ]
-          }
-        ]
       }
     ],
     "global": {
