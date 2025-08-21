@@ -1,0 +1,90 @@
+---
+title: "API Authentication - Secure Access to Flyweel API"
+description: "Learn how to authenticate with the Flyweel API using API keys, manage security tokens, and implement proper authentication practices."
+keywords:
+  - "Flyweel API authentication"
+  - "API key management"
+  - "SpendOps API security"
+  - "Bearer token authentication"
+  - "API access control"
+sidebarTitle: "Authentication"
+---
+
+
+# API Authentication
+
+<Callout type="warning">
+**Secure Your API Keys** - Treat your API keys like passwords. Never expose them in client-side code or public repositories.
+</Callout>
+
+The Flyweel API uses **API key authentication** with Bearer tokens to ensure secure access to your SpendOps data. This guide covers how to obtain, manage, and use your API credentials safely.
+
+## Authentication Method
+
+All API requests must include a valid API key in the Authorization header:
+
+```bash
+Authorization: Bearer YOUR_API_KEY
+```
+
+## Getting Your API Key
+
+During the beta phase, API keys are provided upon approval:
+
+1. **Request Access** - Email [api@flyweel.co](mailto:api@flyweel.co)
+2. **Account Verification** - Confirm your active Flyweel subscription
+3. **Use Case Review** - Describe your integration requirements
+4. **Key Provision** - Receive your unique API key via secure channel
+
+## Using Your API Key
+
+### Example Request
+
+```bash
+curl -H "Authorization: Bearer sk_live_abc123..." \
+     https://api.flyweel.co/v1/campaigns
+```
+
+### Security Best Practices
+
+- **Environment Variables** - Store keys in environment variables, never in code
+- **Secure Storage** - Use secure credential management systems
+- **Regular Rotation** - Rotate keys periodically for enhanced security
+- **Monitor Usage** - Review API usage logs regularly
+
+## Rate Limiting
+
+API keys are subject to rate limits:
+- **100 requests per minute**
+- **1,000 requests per hour**
+
+Rate limit information is included in response headers:
+```
+X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 99
+X-RateLimit-Reset: 1640995200
+```
+
+## Error Handling
+
+### Authentication Errors
+
+**401 Unauthorized**
+```json
+{
+  "error": "Unauthorized",
+  "message": "Invalid API key"
+}
+```
+
+**403 Forbidden**
+```json
+{
+  "error": "Forbidden", 
+  "message": "API key does not have required permissions"
+}
+```
+
+---
+
+**Need help?** Contact [api@flyweel.co](mailto:api@flyweel.co) for authentication support.

@@ -1,33 +1,101 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: "Flyweel API Introduction - SpendOps Platform Integration"
+description: "Getting started with the Flyweel API for programmatic access to campaign data, performance metrics, and SpendOps automation capabilities."
+keywords:
+  - "Flyweel API"
+  - "SpendOps API"
+  - "advertising API"
+  - "campaign data API"
+  - "PPC automation"
+  - "marketing API integration"
+  - "ad performance API"
+  - "cross-platform advertising API"
+sidebarTitle: "API Introduction"
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
 
-## Welcome
+# Flyweel API Introduction
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+<Callout type="info">
+**Beta API Access** - The Flyweel API is currently in beta development. Contact our team for early access and integration support.
+</Callout>
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+The **Flyweel API** provides programmatic access to your SpendOps platform data, enabling custom integrations, automated reporting, and advanced campaign analysis workflows. Built with modern REST principles, our API offers secure, scalable access to unified campaign performance data across Google Ads and Meta Ads.
+
+## API Overview
+
+### Core Capabilities
+
+- **Campaign Data Access** - Retrieve performance metrics across all connected platforms
+- **Advanced Filtering** - Use the same powerful filters available in the AdGrid dashboard
+- **Real-time Metrics** - Access up-to-date campaign performance data
+- **AI Insights** - Programmatic access to AI-generated optimization recommendations
+- **Custom Reporting** - Build automated reporting solutions
+
+### Beta Status
+
+The Flyweel API is currently in beta, with limited access available to select partners and enterprise customers. During the beta phase:
+
+- **Core endpoints** are available for campaign data retrieval
+- **Authentication system** is fully functional and secure
+- **Rate limiting** is in place to ensure platform stability
+- **Documentation** is actively maintained and updated
+
+## Getting Started
+
+### Prerequisites
+
+To use the Flyweel API, you need:
+- An active Flyweel account with connected ad platforms
+- API access permissions (contact support for beta access)
+- Basic understanding of REST APIs and JSON
+
+### Beta Access Request
+
+To request API access during the beta period:
+
+1. **Contact Support** - Email [api@flyweel.co](mailto:api@flyweel.co) with your use case
+2. **Account Verification** - Confirm your active Flyweel subscription
+3. **Access Approval** - Receive API credentials and documentation
+4. **Integration Support** - Get dedicated support for your integration
+
+## Base URL
+
+```
+https://api.flyweel.co/v1
+```
 
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+The Flyweel API uses API key authentication. Include your API key in the request header:
 
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
+```bash
+Authorization: Bearer YOUR_API_KEY
 ```
+
+## Rate Limiting
+
+Current beta rate limits:
+- **100 requests per minute** per API key
+- **1,000 requests per hour** per API key
+- Rate limit headers included in all responses
+
+## Support & Resources
+
+### Getting Help
+
+- **API Support**: [api@flyweel.co](mailto:api@flyweel.co)
+- **Documentation**: Comprehensive guides for beta participants
+- **Developer Support**: Dedicated technical support for integrations
+- **Examples**: Code samples and integration tutorials
+
+### Coming Soon
+
+- **Webhook Support** - Real-time notifications for campaign changes
+- **Bulk Operations** - Efficient handling of large data requests  
+- **Extended Endpoints** - Additional data access and automation features
+- **SDKs** - Official libraries for popular programming languages
+
+---
+
+**Ready to integrate?** Contact our API team to discuss your use case and get early access to Flyweel's powerful SpendOps API capabilities.

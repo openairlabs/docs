@@ -1,0 +1,80 @@
+---
+title: "Campaigns API - Access Campaign Performance Data"
+description: "Retrieve campaign performance data, metrics, and insights from Google Ads and Meta Ads through the Flyweel Campaigns API endpoint."
+keywords:
+  - "campaigns API"
+  - "campaign performance data"
+  - "Google Ads API"
+  - "Meta Ads API"
+  - "campaign metrics API"
+sidebarTitle: "Campaigns"
+---
+
+
+# Campaigns API
+
+<Callout type="info">
+**Beta Endpoint** - The Campaigns API is available in beta. Contact support for access and integration assistance.
+</Callout>
+
+The Campaigns API provides access to unified campaign performance data across all your connected advertising platforms.
+
+## Endpoint
+
+```
+GET /v1/campaigns
+```
+
+## Parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `platform` | string | Filter by platform: `google_ads`, `meta_ads` |
+| `status` | string | Filter by status: `active`, `paused`, `ended` |
+| `date_from` | string | Start date (YYYY-MM-DD) |
+| `date_to` | string | End date (YYYY-MM-DD) |
+| `limit` | integer | Number of results (max 100) |
+| `offset` | integer | Pagination offset |
+
+## Example Request
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     "https://api.flyweel.co/v1/campaigns?platform=google_ads&status=active&limit=10"
+```
+
+## Example Response
+
+```json
+{
+  "data": [
+    {
+      "id": "camp_123",
+      "name": "Summer Sale Campaign",
+      "platform": "google_ads",
+      "status": "active",
+      "metrics": {
+        "impressions": 12500,
+        "clicks": 350,
+        "spend": 125.50,
+        "conversions": 15,
+        "ctr": 2.8,
+        "cpc": 0.36,
+        "roas": 4.2
+      },
+      "created_at": "2024-01-15T10:00:00Z",
+      "updated_at": "2024-01-20T15:30:00Z"
+    }
+  ],
+  "pagination": {
+    "total": 45,
+    "limit": 10,
+    "offset": 0,
+    "has_more": true
+  }
+}
+```
+
+---
+
+**Ready to integrate?** Contact [api@flyweel.co](mailto:api@flyweel.co) for beta access.

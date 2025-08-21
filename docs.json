@@ -1,68 +1,60 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
-  "name": "Flyweel Documentation",
+  "name": "Welcome to Flyweel",
+  "tagline": "Complete guide to advertising spend optimization and campaign management",
   "colors": {
     "primary": "#90DAB8",
     "light": "#A4FED3",
     "dark": "#7BC49A"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/logo/logo.webp",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "User Guide",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "getting-started/quickstart-guide",
+              "getting-started/ad-platform-connections"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Core Features",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "features/adgrid-campaign-manager",
+              "features/ai-agent-chat",
+              "features/reports-analytics"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Account & Settings",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "settings/account-management",
+              "settings/billing-subscription"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "API Reference",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "API Basics",
             "pages": [
-              "api-reference/introduction"
+              "api-reference/introduction",
+              "api-reference/authentication"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Endpoints",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api-reference/campaigns",
+              "api-reference/metrics",
+              "api-reference/accounts"
             ]
           }
         ]
@@ -134,5 +126,20 @@
       "github": "https://github.com/flyweel",
       "linkedin": "https://linkedin.com/company/flyweel"
     }
+  },
+  "seo": {
+    "indexHiddenPages": false
+  },
+  "analytics": {
+    "gtm": {
+      "tagId": "GTM-XXXXXXX"
+    }
+  },
+  "metadata": {
+    "og:type": "website",
+    "og:site_name": "Flyweel SpendOps Documentation",
+    "twitter:site": "@flyweelco",
+    "author": "Flyweel",
+    "robots": "index, follow"
   }
 }

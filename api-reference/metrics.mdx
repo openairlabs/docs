@@ -1,0 +1,79 @@
+---
+title: "Metrics API - Campaign Performance Analytics"
+description: "Access detailed performance metrics, KPIs, and analytics data for your advertising campaigns through the Flyweel Metrics API."
+keywords:
+  - "metrics API"
+  - "campaign analytics API"
+  - "performance metrics"
+  - "advertising KPIs API"
+  - "campaign data API"
+sidebarTitle: "Metrics"
+---
+
+
+# Metrics API
+
+<Callout type="info">
+**Aggregated Analytics** - The Metrics API provides aggregated performance data and insights across all your connected advertising platforms.
+</Callout>
+
+Access detailed performance metrics and KPIs for comprehensive campaign analysis.
+
+## Endpoint
+
+```
+GET /v1/metrics
+```
+
+## Parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `metrics` | array | Specific metrics to retrieve |
+| `platform` | string | Filter by platform |
+| `date_from` | string | Start date (YYYY-MM-DD) |
+| `date_to` | string | End date (YYYY-MM-DD) |
+| `group_by` | string | Group results by: `platform`, `campaign`, `date` |
+
+## Available Metrics
+
+- `impressions` - Total ad impressions
+- `clicks` - Total clicks received  
+- `spend` - Total advertising spend
+- `conversions` - Total conversions tracked
+- `ctr` - Click-through rate
+- `cpc` - Cost per click
+- `cpa` - Cost per acquisition
+- `roas` - Return on ad spend
+
+## Example Request
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     "https://api.flyweel.co/v1/metrics?metrics[]=spend&metrics[]=roas&group_by=platform"
+```
+
+## Example Response
+
+```json
+{
+  "data": {
+    "google_ads": {
+      "spend": 2450.75,
+      "roas": 3.8
+    },
+    "meta_ads": {
+      "spend": 1875.25,  
+      "roas": 4.2
+    }
+  },
+  "period": {
+    "from": "2024-01-01",
+    "to": "2024-01-31"
+  }
+}
+```
+
+---
+
+**Need specific metrics?** Contact [api@flyweel.co](mailto:api@flyweel.co) for custom metric requests.

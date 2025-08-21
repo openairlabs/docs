@@ -1,5 +1,86 @@
 /* Flyweel Liquid Glass Design System for Mintlify */
 
+/* Alliance Light Font Import for headings - Multiple paths */
+@font-face {
+  font-family: 'Alliance No.2';
+  src: url('/fonts/Alliance-No2-Light.woff2') format('woff2'),
+       url('./fonts/Alliance-No2-Light.woff2') format('woff2'),
+       url('../public/fonts/Alliance-No2-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fallback Alliance font declaration */
+@font-face {
+  font-family: 'Alliance Fallback';
+  src: url('/fonts/Alliance No2 Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Funnel Sans Font Import from Google Fonts for body text */
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* Inter as fallback */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Apply Alliance Light to all headings */
+h1, h2, h3, h4, h5, h6,
+.heading,
+[class*="heading"],
+.sidebar h1, .sidebar h2, .sidebar h3, .sidebar h4, .sidebar h5, .sidebar h6,
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6,
+.mdx-content h1, .mdx-content h2, .mdx-content h3, .mdx-content h4, .mdx-content h5, .mdx-content h6,
+[data-testid="content"] h1,
+[data-testid="content"] h2,
+[data-testid="content"] h3,
+[data-testid="content"] h4,
+[data-testid="content"] h5,
+[data-testid="content"] h6 {
+  font-family: 'Alliance No.2', 'Alliance No.2 Backup', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif !important;
+  font-weight: 300 !important;
+  letter-spacing: -0.02em;
+}
+
+/* Apply Funnel Sans to body text (excluding headings) */
+body,
+p,
+.content p,
+.mdx-content p,
+[data-testid="content"] p,
+span:not([class*="heading"]),
+div:not([class*="heading"]),
+li,
+a:not([class*="heading"]),
+.text {
+  font-family: 'Funnel Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Even lighter for descriptions and secondary text with Funnel Sans */
+.description,
+.subtitle,
+.secondary-text,
+.card p,
+.callout p,
+small,
+.text-sm,
+.text-xs {
+  font-family: 'Funnel Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  font-weight: 300 !important;
+  opacity: 0.9;
+}
+
+/* Strong/bold text should be medium weight to maintain hierarchy */
+strong,
+b,
+.font-bold,
+.font-semibold {
+  font-weight: 500 !important;
+}
+
 :root {
   /* Flyweel Brand Colors */
   --flyweel-primary: #90DAB8;

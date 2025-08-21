@@ -1,0 +1,91 @@
+---
+title: "Accounts API - Connected Platform Management"
+description: "Manage and retrieve information about your connected Google Ads and Meta Ads accounts through the Flyweel Accounts API."
+keywords:
+  - "accounts API"
+  - "connected platforms API"
+  - "Google Ads accounts"
+  - "Meta Ads accounts"
+  - "platform management API"
+sidebarTitle: "Accounts"
+---
+
+
+# Accounts API
+
+<Callout type="info">
+**Account Management** - The Accounts API provides access to information about your connected Google Ads and Meta Ads accounts.
+</Callout>
+
+Retrieve details about connected advertising platforms and account status.
+
+## Endpoints
+
+### List All Accounts
+
+```
+GET /v1/accounts
+```
+
+### Get Account Details
+
+```
+GET /v1/accounts/{account_id}
+```
+
+## Parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `platform` | string | Filter by platform: `google_ads`, `meta_ads` |
+| `status` | string | Filter by status: `active`, `inactive` |
+
+## Example Request
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     "https://api.flyweel.co/v1/accounts"
+```
+
+## Example Response
+
+```json
+{
+  "data": [
+    {
+      "id": "acc_123",
+      "name": "Company Google Ads",
+      "platform": "google_ads",
+      "platform_id": "123-456-7890",
+      "status": "active",
+      "currency": "USD",
+      "timezone": "America/New_York",
+      "connected_at": "2024-01-15T10:00:00Z",
+      "last_sync": "2024-01-20T15:30:00Z",
+      "campaigns_count": 25
+    },
+    {
+      "id": "acc_456", 
+      "name": "Company Meta Business",
+      "platform": "meta_ads",
+      "platform_id": "act_987654321",
+      "status": "active",
+      "currency": "USD",
+      "timezone": "America/New_York", 
+      "connected_at": "2024-01-16T14:00:00Z",
+      "last_sync": "2024-01-20T15:28:00Z",
+      "campaigns_count": 18
+    }
+  ]
+}
+```
+
+## Account Status
+
+- `active` - Account is connected and syncing data
+- `inactive` - Account connection has been disabled
+- `error` - Account has sync errors requiring attention
+
+---
+
+**Account issues?** Contact [api@flyweel.co](mailto:api@flyweel.co) for support.
