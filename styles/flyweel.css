@@ -1,0 +1,154 @@
+/* Flyweel Liquid Glass Design System for Mintlify */
+
+:root {
+  /* Flyweel Brand Colors */
+  --flyweel-primary: #90DAB8;
+  --flyweel-light: #A4FED3;
+  --flyweel-dark: #7BC49A;
+  --flyweel-bg-dark: #0F1512;
+  
+  /* Glass morphism variables */
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.1);
+  --glass-accent: rgba(144, 218, 184, 0.02);
+}
+
+/* Dark theme background gradient */
+[data-theme="dark"],
+.dark {
+  background: linear-gradient(135deg, #0A0F0B 0%, #0F1512 50%, #0A0F0B 100%) !important;
+}
+
+/* Ensure body and html have the right background */
+html[data-theme="dark"] body,
+html.dark body {
+  background: linear-gradient(135deg, #0A0F0B 0%, #0F1512 50%, #0A0F0B 100%) !important;
+  min-height: 100vh;
+}
+
+/* Liquid glass effect for cards and containers */
+.liquid-glass {
+  position: relative;
+  overflow: hidden;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  border: 1px solid var(--glass-border);
+  box-shadow: 
+    inset 0 1px 0px var(--glass-highlight),
+    0 0 8px var(--glass-accent),
+    0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.15) 0%, 
+    rgba(144, 218, 184, 0.02) 20%,
+    transparent 40%);
+  opacity: 0.6;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.liquid-glass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, 
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(164, 254, 211, 0.01) 20%, 
+    transparent 40%);
+  opacity: 0.4;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Apply liquid glass to Mintlify cards */
+[data-theme="dark"] .card,
+[data-theme="dark"] .info,
+[data-theme="dark"] .warning,
+[data-theme="dark"] .note {
+  @extend .liquid-glass;
+}
+
+/* Gradient text effect */
+.text-gradient-flyweel {
+  background: linear-gradient(90deg, #90DAB8 0%, #A4FED3 50%, #90DAB8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 100%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Enhanced button styling */
+[data-theme="dark"] .button {
+  background: rgba(144, 218, 184, 0.1);
+  border: 1px solid rgba(144, 218, 184, 0.3);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .button:hover {
+  background: rgba(144, 218, 184, 0.15);
+  border: 1px solid rgba(144, 218, 184, 0.4);
+  box-shadow: 0 0 12px rgba(144, 218, 184, 0.2);
+}
+
+/* Navigation styling */
+[data-theme="dark"] nav {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px) saturate(150%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Code block enhancements */
+[data-theme="dark"] pre {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(144, 218, 184, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+/* Sidebar styling */
+[data-theme="dark"] .sidebar {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16px) saturate(140%);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Table styling */
+[data-theme="dark"] table {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+[data-theme="dark"] th,
+[data-theme="dark"] td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Focus and hover states */
+[data-theme="dark"] a:hover,
+[data-theme="dark"] button:hover {
+  box-shadow: 0 0 8px rgba(144, 218, 184, 0.3);
+  transition: box-shadow 0.2s ease;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .liquid-glass {
+    backdrop-filter: blur(20px) saturate(130%);
+    -webkit-backdrop-filter: blur(20px) saturate(130%);
+  }
+}

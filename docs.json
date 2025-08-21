@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "maple",
+  "name": "Flyweel Documentation",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#90DAB8",
+    "light": "#A4FED3",
+    "dark": "#7BC49A"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -71,39 +71,50 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Flyweel App",
+          "href": "https://app.flyweel.co",
+          "icon": "rocket"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "anchor": "Get Early Access",
+          "href": "https://waitlist.flyweel.co",
+          "icon": "sparkles"
+        },
+        {
+          "anchor": "Go to Site",
+          "href": "https://flyweel.co",
+          "icon": "globe"
         },
         {
           "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
+          "href": "https://flyweel.co/blog",
           "icon": "newspaper"
         }
       ]
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/flyweel-light-theme.webp",
+    "dark": "/logo/flyweel-dark-theme.webp",
+    "href": "https://flyweel.co"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@flyweel.co"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Get Early Access",
+      "href": "https://waitlist.flyweel.co"
     }
+  },
+  "styling": {
+    "primaryBorder": "#90DAB8",
+    "codeblocks": "dark",
+    "borderRadius": "12px"
   },
   "contextual": {
     "options": [
@@ -119,9 +130,9 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/flyweelco",
+      "github": "https://github.com/flyweel",
+      "linkedin": "https://linkedin.com/company/flyweel"
     }
   }
 }
