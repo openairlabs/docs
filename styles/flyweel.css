@@ -95,17 +95,26 @@ b,
   --glass-accent: rgba(144, 218, 184, 0.02);
 }
 
-/* Dark theme background gradient */
+/* Dark theme background gradient - Much darker */
 [data-theme="dark"],
 .dark {
-  background: linear-gradient(135deg, #0A0F0B 0%, #0F1512 50%, #0A0F0B 100%) !important;
+  background: linear-gradient(135deg, #030504 0%, #070909 50%, #030504 100%) !important;
 }
 
-/* Ensure body and html have the right background */
+/* Ensure body and html have the right background - Much darker */
 html[data-theme="dark"] body,
 html.dark body {
-  background: linear-gradient(135deg, #0A0F0B 0%, #0F1512 50%, #0A0F0B 100%) !important;
+  background: linear-gradient(135deg, #030504 0%, #070909 50%, #030504 100%) !important;
   min-height: 100vh;
+}
+
+
+/* Ensure sidebar background matches darker theme */
+[data-theme="dark"] .sidebar,
+[data-theme="dark"] nav {
+  background: rgba(3, 5, 4, 0.95) !important;
+  backdrop-filter: blur(20px) saturate(150%);
+  border-right: 1px solid rgba(255, 255, 255, 0.03) !important;
 }
 
 /* Liquid glass effect for cards and containers */
