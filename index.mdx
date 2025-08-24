@@ -13,7 +13,19 @@ keywords:
 ---
 
 <Frame style={{ height: '300px', overflow: 'hidden' }}>
-  <img src="/images/closed-beta-hero.webp" alt="Flyweel: Closed beta now live." style={{ height: '100%', width: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} />
+  <div 
+    style={{
+      height: '100%',
+      width: '100%',
+      backgroundImage: 'url(/images/closed-beta-hero.webp)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center center',
+      backgroundRepeat: 'no-repeat',
+      borderRadius: '8px'
+    }}
+    role="img"
+    aria-label="Flyweel: Closed beta now live."
+  />
 </Frame>
 
 ### Data Sources <sup style={{ color: '#90DAB8', fontSize: '0.725rem' }}>Latest</sup>
