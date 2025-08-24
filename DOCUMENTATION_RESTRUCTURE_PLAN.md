@@ -1,3 +1,9 @@
+---
+title: "Internal: Documentation Restructure Plan"
+hidden: true
+robots: "noindex, nofollow"
+---
+
 # 📋 Flyweel Documentation Restructure Plan
 
 ## 🎯 Overview

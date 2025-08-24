@@ -1,3 +1,9 @@
+---
+title: "Internal: Logo Setup"
+hidden: true
+robots: "noindex, nofollow"
+---
+
 # Flyweel Logo Setup Complete ✅
 
 ## Logos Successfully Copied and Configured

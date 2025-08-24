@@ -1,3 +1,9 @@
+---
+title: "Internal: Theme Logos Setup"
+hidden: true
+robots: "noindex, nofollow"
+---
+
 # ✅ Theme-Specific Flyweel Logo Setup Complete
 
 ## Logo Configuration Summary

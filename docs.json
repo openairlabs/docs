@@ -122,7 +122,8 @@
     "metatags": {
       "og:type": "website",
       "og:site_name": "Flyweel SpendOps Documentation"
-    }
+    },
+    "sitemap": true
   },
   "analytics": {
     "gtm": {

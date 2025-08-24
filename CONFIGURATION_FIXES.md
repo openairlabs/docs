@@ -1,3 +1,9 @@
+---
+title: "Internal: Configuration Fixes"
+hidden: true
+robots: "noindex, nofollow"
+---
+
 # Mintlify Configuration Fixes Applied
 
 ## Issues Fixed

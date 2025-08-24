@@ -1,3 +1,9 @@
+---
+title: "Internal: Styling Summary"
+hidden: true
+robots: "noindex, nofollow"
+---
+
 # Flyweel Mintlify Documentation Styling Implementation
 
 ## Overview
