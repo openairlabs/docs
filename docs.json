@@ -10,9 +10,10 @@
   },
   "favicon": "/logo/logo.webp",
   "navigation": {
-    "tabs": [
+    "dropdowns": [
       {
-        "tab": "User Guide",
+        "dropdown": "Documentation",
+        "icon": "book-open",
         "groups": [
           {
             "group": "Getting Started",
@@ -38,12 +39,22 @@
             ]
           }
         ]
+      },
+      {
+        "dropdown": "Changelog",
+        "icon": "megaphone",
+        "pages": ["changelog"]
+      },
+      {
+        "dropdown": "Go To Blog",
+        "icon": "newspaper",
+        "href": "https://flyweel.co/resources"
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Flyweel App",
+          "anchor": "Sign In To App",
           "href": "https://app.flyweel.co",
           "icon": "rocket"
         },
@@ -56,11 +67,6 @@
           "anchor": "Go to Site",
           "href": "https://flyweel.co",
           "icon": "globe"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://flyweel.co/resources",
-          "icon": "newspaper"
         }
       ]
     }
@@ -75,6 +81,10 @@
       {
         "label": "Support",
         "href": "mailto:team@flyweel.co"
+      },
+      {
+        "label": "RSS",
+        "href": "https://flyweel.co/changelog/rss.xml"
       }
     ],
     "primary": {
@@ -107,7 +117,12 @@
     }
   },
   "seo": {
-    "indexHiddenPages": false
+    "indexHiddenPages": false,
+    "indexing": "all",
+    "metatags": {
+      "og:type": "website",
+      "og:site_name": "Flyweel SpendOps Documentation"
+    }
   },
   "analytics": {
     "gtm": {
