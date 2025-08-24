@@ -121,12 +121,10 @@
   },
   "seo": {
     "indexHiddenPages": false,
-    "indexing": "all",
     "metatags": {
       "og:type": "website",
       "og:site_name": "Flyweel SpendOps Documentation"
-    },
-    "sitemap": true
+    }
   },
   "analytics": {
     "gtm": {
