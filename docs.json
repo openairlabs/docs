@@ -51,6 +51,9 @@
         "href": "https://flyweel.co/resources"
       }
     ],
+    "hiddenPages": [
+      ".internal/*"
+    ],
     "global": {
       "anchors": [
         {
