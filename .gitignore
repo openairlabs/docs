@@ -1,0 +1,11 @@
+# Node and general OS ignores
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Local scratch files
+ChangelogPost.astro
+astro5-changelog/
+ASTRO5_CHANGELOG_GUIDE.md
+ChangelogPage.astro
+
