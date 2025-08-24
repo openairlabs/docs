@@ -131,6 +131,11 @@
       "tagId": "GTM-XXXXXXX"
     }
   },
+  "integrations": {
+    "posthog": {
+      "apiKey": "phc_rLGYvtbtE70mDSuIASbhtZXzepzUjv3HfI2d7ofP2S"
+    }
+  },
   "metadata": {
     "og:type": "website",
     "og:site_name": "Flyweel SpendOps Documentation",
